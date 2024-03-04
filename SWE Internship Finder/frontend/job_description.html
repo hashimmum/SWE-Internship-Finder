@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .job-description-container {
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            background-color: #ffffff;
+            width: 60%;
+            max-width: 800px;
+        }
+        .job-description-container h1, .job-description-container h2 {
+            color: #333;
+        }
+        .job-description-container p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .job-description-container a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .job-description-container a:hover {
+            background-color: #0056b3;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .job-description-container button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .job-description-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body data-job-id="{{ job.id }}">
+    <div class="job-description-container">
+        <h1>Job Title Here</h1>
+        <p>Description of the job...</p>
+        <div class="buttons">
+            <button id="apply-button">Apply</button>
+            <button id="hide-button">Hide</button>
+        </div>
+    </div>
+</body>
+</html>
